@@ -1,0 +1,207 @@
+h1 {
+  font-family: 'Bebas Neue', cursive;
+  font-family: 'Teko', sans-serif;
+}
+
+h2,
+a {
+  font-family: 'Teko', sans-serif;
+}
+
+body {
+  background-color: black;
+  overflow-x: hidden;
+}
+
+.sticky {
+  position: sticky;
+  z-index: 3;
+  top: 0;
+}
+.navholder {
+  position: absolute;
+  display: inline-block;
+  right: 0;
+  margin-right: 2rem;
+  margin-top: 2rem;
+  z-index: 3;
+}
+
+.dropdown {
+  display: none;
+  position: absolute;
+  right: 0;
+  margin-right: 1.5rem;
+  padding-top: 1rem;
+  padding-left: 5rem;
+  padding-right: 0.5rem;
+  padding-bottom: 1rem;
+}
+
+.navholder:hover .dropdown {
+  display: block;
+}
+
+nav {
+  position: relative;
+  color: white;
+  text-align: end;
+}
+
+.navholder img {
+  filter: invert(1);
+  height: 3rem;
+  transform: rotate(45deg);
+  animation: transform 50ms ease;
+}
+
+.navholder img:hover {
+  transform: rotate(90deg);
+}
+
+nav a {
+  text-decoration: none;
+  color: white;
+  font-size: xx-large;
+}
+
+header {
+  position: relative;
+  height: 100vh;
+}
+
+header video {
+  z-index: -1;
+}
+
+header video {
+  background-color: black;
+  display: flex;
+  justify-content: center;
+  height: 100%;
+  width: 100%;
+  opacity: 0;
+  background-color: black;
+  animation: hvideo 3s ease forwards;
+  animation-delay: 6s;
+}
+
+@keyframes hvideo {
+  to {
+    opacity: 100%;
+  }
+}
+
+#typed-out {
+  overflow: hidden;
+  font-size: 2.35rem;
+  white-space: nowrap;
+  width: 0;
+  animation: typing 5s steps(60, end) forwards;
+  text-align: center;
+}
+
+@keyframes typing {
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%;
+  }
+}
+.textbox {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  right: 0;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+  width: 100vw;
+  color: black;
+  animation: hidetb 3s ease forwards;
+  animation-delay: 5.5s;
+  opacity: 1;
+}
+
+@keyframes hidetb {
+  to {
+    opacity: 0;
+  }
+}
+
+#blink {
+  color: burlywood;
+  opacity: 0;
+  animation: blink-animation 0.7s steps(5, start) infinite;
+  animation-delay: 4s;
+}
+
+@keyframes blink-animation {
+  to {
+    opacity: 100;
+  }
+}
+
+header h1 {
+  position: relative;
+  z-index: 1;
+  color: white;
+}
+
+.scrollindi {
+  position: absolute;
+  opacity: 0;
+  bottom: 0;
+  left: 50%;
+  border-left: 1px solid white;
+  animation: blink-animation 0.7s steps(5, start) infinite;
+  animation-iteration-count: 8;
+  animation-delay: 14s;
+}
+
+.me {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 100vh;
+  left: 20vw;
+  margin-top: 10rem;
+}
+
+.experience,
+.collaboration {
+  display: grid;
+  grid-template-columns: auto auto;
+}
+
+.experience h1,
+.collaboration h1 {
+  grid-row: 1/20;
+  text-transform: uppercase;
+}
+
+.experience h2,
+.collaboration h2 {
+  text-transform: uppercase;
+  padding: 0;
+  margin: 0;
+}
+
+.links {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.links a {
+  color: white;
+  text-decoration: none;
+  margin: 1rem;
+  font-size: xx-large;
+}
